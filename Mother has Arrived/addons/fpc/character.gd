@@ -123,9 +123,7 @@ func _physics_process(delta):
 
 		
 		was_on_floor = is_on_floor() # This must always be at the end of physics_process
-
-
-
+	
 
 func handle_movement(delta, input_dir):
 	var direction = input_dir.rotated(-HEAD.rotation.y)
