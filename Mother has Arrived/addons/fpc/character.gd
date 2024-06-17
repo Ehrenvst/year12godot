@@ -25,13 +25,11 @@ extends CharacterBody3D
 @export var PAUSE : String = "ui_cancel"
 
 @export_group("Feature Settings")
-@export var in_air_momentum : bool = true
 @export var motion_smoothing : bool = true
-@export var dynamic_fov : bool = true
-@export var continuous_jumping : bool = true
 @export var view_bobbing : bool = true
-@export var jump_animation : bool = true
 @export var pausing_enabled : bool = true
+@onready var ray = $Head/Camera/RayCast3D
+@onready var interact_label = $CanvasLayer/Label
 
 # Member variables
 var speed : float = base_speed
@@ -59,25 +57,6 @@ func _ready():
 	# Reset the camera position
 	HEADBOB_ANIMATION.play("RESET")
 	
-	check_controls()
-
-func check_controls(): # If you add a control, you might want to add a check for it here.
-	if !InputMap.has_action(LEFT):
-		push_error("No control mapped for move left. Please add an input map control. Disabling movement.")
-		immobile = true
-	if !InputMap.has_action(RIGHT):
-		push_error("No control mapped for move right. Please add an input map control. Disabling movement.")
-		immobile = true
-	if !InputMap.has_action(FORWARD):
-		push_error("No control mapped for move forward. Please add an input map control. Disabling movement.")
-		immobile = true
-	if !InputMap.has_action(BACKWARD):
-		push_error("No control mapped for move backward. Please add an input map control. Disabling movement.")
-		immobile = true
-	if !InputMap.has_action(PAUSE):
-		push_error("No control mapped for move pause. Please add an input map control. Disabling pausing.")
-		pausing_enabled = false
-
 
 func change_reticle(reticle):
 	if RETICLE:
@@ -114,48 +93,30 @@ func _physics_process(delta):
 	
 	low_ceiling = $CrouchCeilingDetection.is_colliding()
 	
-	if dynamic_fov:
-		update_camera_fov()
-	
 	if view_bobbing:
 		headbob_animation(input_dir)
 	
+	if ray.is_colliding():
+		check_collisions()
+	else:
+		interact_label.visible = false
+		
 
 		
 		was_on_floor = is_on_floor() # This must always be at the end of physics_process
 	
+func check_collisions():
+	var collider = ray.get_collider()
+	if collider.is_in_group("Doors"):
+		interact_label.visible = true
+		if Input.is_action_pressed("interact"):
+			collider.apply_central_impulse(Vector3.UP * 100)
 
 func handle_movement(delta, input_dir):
 	var direction = input_dir.rotated(-HEAD.rotation.y)
 	direction = Vector3(direction.x, 0, direction.y)
 	move_and_slide()
 	
-	if in_air_momentum:
-		if is_on_floor():
-			if motion_smoothing:
-				velocity.x = lerp(velocity.x, direction.x * speed, acceleration * delta)
-				velocity.z = lerp(velocity.z, direction.z * speed, acceleration * delta)
-			else:
-				velocity.x = direction.x * speed
-				velocity.z = direction.z * speed
-	else:
-		if motion_smoothing:
-			velocity.x = lerp(velocity.x, direction.x * speed, acceleration * delta)
-			velocity.z = lerp(velocity.z, direction.z * speed, acceleration * delta)
-		else:
-			velocity.x = direction.x * speed
-			velocity.z = direction.z * speed
-
-# Any enter state function should only be called once when you want to enter that state, not every frame.
-
-
-
-func update_camera_fov():
-	if state == "sprinting":
-		CAMERA.fov = lerp(CAMERA.fov, 85.0, 0.3)
-	else:
-		CAMERA.fov = lerp(CAMERA.fov, 75.0, 0.3)
-
 
 func headbob_animation(moving):
 	if moving and is_on_floor():
@@ -191,6 +152,7 @@ func _process(delta):
 		status += " in the air"
 	$UserInterface/DebugPanel.add_property("State", status, 4)
 	
+
 	if pausing_enabled:
 		if Input.is_action_just_pressed(PAUSE):
 			if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -200,6 +162,7 @@ func _process(delta):
 	
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 	
+
 	# Uncomment if you want full controller support
 	#var controller_view_rotation = Input.get_vector(LOOK_LEFT, LOOK_RIGHT, LOOK_UP, LOOK_DOWN)
 	#HEAD.rotation_degrees.y -= controller_view_rotation.x * 1.5

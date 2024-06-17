@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv5a0a54q55an"]
+[gd_scene load_steps=4 format=3 uid="uid://cv5a0a54q55an"]
 
 [ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_54wsr"]
 [ext_resource type="PackedScene" uid="uid://di1pot866wfqr" path="res://Test Level.blend" id="2_kxnfa"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
-[ext_resource type="PackedScene" uid="uid://dsgw5qsm7tkqh" path="res://OpenDoor.tscn" id="4_qxowc"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)
@@ -304,6 +303,3 @@ shadow_enabled = true
 shadow_blur = 0.904
 spot_range = 8.17
 spot_angle = 40.0471
-
-[node name="Door" parent="." instance=ExtResource("4_qxowc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1851, 0.00631046, 17.3902)
