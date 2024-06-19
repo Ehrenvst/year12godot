@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3e8di2vjfwg3"]
+
+[ext_resource type="Script" path="res://Node3D.gd" id="1_a14rw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q5fd6"]
+
+[sub_resource type="Animation" id="Animation_610x6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qdprp"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.57795, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4bm44"]
+_data = {
+"RESET": SubResource("Animation_610x6"),
+"open": SubResource("Animation_qdprp")
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_cs2wt"]
+
+[node name="Door" type="Node3D"]
+script = ExtResource("1_a14rw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Doors"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.507165, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_q5fd6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4bm44")
+}
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.526861, 0, 0)
+mesh = SubResource("BoxMesh_cs2wt")

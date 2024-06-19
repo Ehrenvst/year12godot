@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv5a0a54q55an"]
+[gd_scene load_steps=5 format=3 uid="uid://cv5a0a54q55an"]
 
 [ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_54wsr"]
 [ext_resource type="PackedScene" uid="uid://di1pot866wfqr" path="res://Test Level.blend" id="2_kxnfa"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
+[ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://doortest.tscn" id="4_1v7gc"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)
@@ -12,9 +13,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5404, 0, -5.53087)
 
 [node name="Test Level" parent="." instance=ExtResource("2_kxnfa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5394, 0, 10.4265)
-
-[node name="Character" parent="." instance=ExtResource("3_anwr0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7299, 0.279852, 19.0739)
 
 [node name="Lights" type="Node3D" parent="."]
 
@@ -303,3 +301,9 @@ shadow_enabled = true
 shadow_blur = 0.904
 spot_range = 8.17
 spot_angle = 40.0471
+
+[node name="Character" parent="." instance=ExtResource("3_anwr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5273, 9.05991e-06, 18.8633)
+
+[node name="Door" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.71196, 19.8561)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://7ccyvgnra0gu"]
+
+[ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_su8b8"]
+[ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="2_tukm0"]
+[ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://doortest.tscn" id="3_817o4"]
+
+[node name="Level2" type="Node3D"]
+
+[node name="Test Level 2" parent="." instance=ExtResource("1_su8b8")]
+
+[node name="Character" parent="." instance=ExtResource("2_tukm0")]
+
+[node name="Door" parent="." instance=ExtResource("3_817o4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83071, 2.09329, 0)

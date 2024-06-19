@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqfjoa6r2eojx"]
+[gd_scene load_steps=16 format=3 uid="uid://cqfjoa6r2eojx"]
 
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="1_e18vq"]
 [ext_resource type="Texture2D" uid="uid://pe7a4weirj2g" path="res://textures/dark.png" id="2_08fdt"]
 [ext_resource type="Texture2D" uid="uid://cxjxvqmf4boxq" path="res://textures/green.png" id="3_q4clv"]
 [ext_resource type="Texture2D" uid="uid://dsv4jm4vydflb" path="res://textures/orange.png" id="4_1ns5t"]
+[ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://doortest.tscn" id="4_6ys71"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_edcox"]
 ground_color = Color(0.160784, 0.815686, 0.905882, 1)
@@ -62,9 +63,6 @@ uv1_triplanar_sharpness = 0.000850145
 
 [node name="test_world" type="Node3D"]
 
-[node name="Character" parent="." instance=ExtResource("1_e18vq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_20rw3")
 
@@ -105,4 +103,7 @@ use_collision = true
 size = Vector3(19, 8, 1)
 material = SubResource("StandardMaterial3D_7j4uu")
 
-[editable path="Character"]
+[node name="Door" parent="." instance=ExtResource("4_6ys71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6892, 0.984627, 17.7021)
+
+[node name="Character" parent="." instance=ExtResource("1_e18vq")]
