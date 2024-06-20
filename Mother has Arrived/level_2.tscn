@@ -9,6 +9,34 @@
 [node name="Test Level 2" parent="." instance=ExtResource("1_su8b8")]
 
 [node name="Character" parent="." instance=ExtResource("2_tukm0")]
+base_speed = null
+sprint_speed = null
+crouch_speed = null
+acceleration = null
+jump_velocity = null
+mouse_sensitivity = null
+immobile = null
+JUMP = null
+LEFT = null
+RIGHT = null
+FORWARD = null
+BACKWARD = null
+PAUSE = null
+CROUCH = null
+SPRINT = null
+jumping_enabled = null
+in_air_momentum = null
+motion_smoothing = null
+sprint_enabled = null
+crouch_enabled = null
+crouch_mode = null
+sprint_mode = null
+dynamic_fov = null
+continuous_jumping = null
+view_bobbing = null
+jump_animation = null
+pausing_enabled = null
+gravity_enabled = null
 
 [node name="Door" parent="." instance=ExtResource("3_817o4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83071, 2.09329, 0)

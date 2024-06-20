@@ -91,10 +91,13 @@ func _ready():
 	# Reset the camera position
 	# If you want to change the default head height, change these animations.
 	HEADBOB_ANIMATION.play("RESET")
-	JUMP_ANIMATION.play("RESET")
-	CROUCH_ANIMATION.play("RESET")
 	
 	check_controls()
+	
+func _unhandled_input(event):
+		if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			HEAD.rotation_degrees.y -= event.relative.x * mouse_sensitivity
+			HEAD.rotation_degrees.x -= event.relative.y * mouse_sensitivity
 
 func check_controls(): # If you add a control, you might want to add a check for it here.
 	if !InputMap.has_action(JUMP):
@@ -151,8 +154,6 @@ func _physics_process(delta):
 	if not is_on_floor() and gravity and gravity_enabled:
 		velocity.y -= gravity * delta
 	
-	handle_jumping()
-	
 	var input_dir = Vector2.ZERO
 	if !immobile: # Immobility works by interrupting user input, so other forces can still be applied to the player
 		input_dir = Input.get_vector(LEFT, RIGHT, FORWARD, BACKWARD)
@@ -161,37 +162,11 @@ func _physics_process(delta):
 	# The player is not able to stand up if the ceiling is too low
 	low_ceiling = $CrouchCeilingDetection.is_colliding()
 	
-	handle_state(input_dir)
 	if dynamic_fov: # This may be changed to an AnimationPlayer
 		update_camera_fov()
 	
 	if view_bobbing:
 		headbob_animation(input_dir)
-	
-	if jump_animation:
-		if !was_on_floor and is_on_floor(): # The player just landed
-			match randi() % 2: #TODO: Change this to detecting velocity direction
-				0:
-					JUMP_ANIMATION.play("land_left", 0.25)
-				1:
-					JUMP_ANIMATION.play("land_right", 0.25)
-	
-	was_on_floor = is_on_floor() # This must always be at the end of physics_process
-
-
-func handle_jumping():
-	if jumping_enabled:
-		if continuous_jumping: # Hold down the jump button
-			if Input.is_action_pressed(JUMP) and is_on_floor() and !low_ceiling:
-				if jump_animation:
-					JUMP_ANIMATION.play("jump", 0.25)
-				velocity.y += jump_velocity # Adding instead of setting so jumping on slopes works properly
-		else:
-			if Input.is_action_just_pressed(JUMP) and is_on_floor() and !low_ceiling:
-				if jump_animation:
-					JUMP_ANIMATION.play("jump", 0.25)
-				velocity.y += jump_velocity
-
 
 func handle_movement(delta, input_dir):
 	var direction = input_dir.rotated(-HEAD.rotation.y)
@@ -214,74 +189,6 @@ func handle_movement(delta, input_dir):
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
 
-
-func handle_state(moving):
-	if sprint_enabled:
-		if sprint_mode == 0:
-			if Input.is_action_pressed(SPRINT) and state != "crouching":
-				if moving:
-					if state != "sprinting":
-						enter_sprint_state()
-				else:
-					if state == "sprinting":
-						enter_normal_state()
-			elif state == "sprinting":
-				enter_normal_state()
-		elif sprint_mode == 1:
-			if moving:
-				# If the player is holding sprint before moving, handle that cenerio
-				if Input.is_action_pressed(SPRINT) and state == "normal":
-					enter_sprint_state()
-				if Input.is_action_just_pressed(SPRINT):
-					match state:
-						"normal":
-							enter_sprint_state()
-						"sprinting":
-							enter_normal_state()
-			elif state == "sprinting":
-				enter_normal_state()
-	
-	if crouch_enabled:
-		if crouch_mode == 0:
-			if Input.is_action_pressed(CROUCH) and state != "sprinting":
-				if state != "crouching":
-					enter_crouch_state()
-			elif state == "crouching" and !$CrouchCeilingDetection.is_colliding():
-				enter_normal_state()
-		elif crouch_mode == 1:
-			if Input.is_action_just_pressed(CROUCH):
-				match state:
-					"normal":
-						enter_crouch_state()
-					"crouching":
-						if !$CrouchCeilingDetection.is_colliding():
-							enter_normal_state()
-
-
-# Any enter state function should only be called once when you want to enter that state, not every frame.
-
-func enter_normal_state():
-	#print("entering normal state")
-	var prev_state = state
-	if prev_state == "crouching":
-		CROUCH_ANIMATION.play_backwards("crouch")
-	state = "normal"
-	speed = base_speed
-
-func enter_crouch_state():
-	#print("entering crouch state")
-	var prev_state = state
-	state = "crouching"
-	speed = crouch_speed
-	CROUCH_ANIMATION.play("crouch")
-
-func enter_sprint_state():
-	#print("entering sprint state")
-	var prev_state = state
-	if prev_state == "crouching":
-		CROUCH_ANIMATION.play_backwards("crouch")
-	state = "sprinting"
-	speed = sprint_speed
 
 
 func update_camera_fov():
@@ -334,18 +241,14 @@ func _process(delta):
 				Input.MOUSE_MODE_VISIBLE:
 					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-	
 
 	if ray.is_colliding():
 		check_collisions()
 	else:
 		pass
 		#interact_label.visible = false
-		
 
-		
 	was_on_floor = is_on_floor() # This must always be at the end of physics_process
 	
 func check_collisions():
@@ -354,15 +257,3 @@ func check_collisions():
 		#interact_label.visible = true
 		if Input.is_action_pressed("interact"):
 			
-			#collider.apply_central_impulse(Vector3.UP * 100)
-	# Uncomment if you want full controller support
-	#var controller_view_rotation = Input.get_vector(LOOK_LEFT, LOOK_RIGHT, LOOK_UP, LOOK_DOWN)
-	#HEAD.rotation_degrees.y -= controller_view_rotation.x * 1.5
-	#HEAD.rotation_degrees.x -= controller_view_rotation.y * 1.5
-
-
-func _unhandled_input(event):
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		HEAD.rotation_degrees.y -= event.relative.x * mouse_sensitivity
-		HEAD.rotation_degrees.x -= event.relative.y * mouse_sensitivity
-
