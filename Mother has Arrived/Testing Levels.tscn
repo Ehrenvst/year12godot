@@ -304,34 +304,18 @@ spot_angle = 40.0471
 
 [node name="Character" parent="." instance=ExtResource("3_anwr0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5273, 9.05991e-06, 18.8633)
-base_speed = null
-sprint_speed = null
-crouch_speed = null
-acceleration = null
-jump_velocity = null
-mouse_sensitivity = null
-immobile = null
-JUMP = null
-LEFT = null
-RIGHT = null
-FORWARD = null
-BACKWARD = null
-PAUSE = null
-CROUCH = null
-SPRINT = null
-jumping_enabled = null
-in_air_momentum = null
-motion_smoothing = null
-sprint_enabled = null
-crouch_enabled = null
-crouch_mode = null
-sprint_mode = null
-dynamic_fov = null
-continuous_jumping = null
-view_bobbing = null
-jump_animation = null
-pausing_enabled = null
-gravity_enabled = null
 
 [node name="Door" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4765, 2.38419e-07, 16.417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 6, 16.4)
+
+[node name="Door2" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, 10.5)
+
+[node name="Door3" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 6, 10.5)
+
+[node name="Door4" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, 4.5)
+
+[node name="Door5" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, -1.4)

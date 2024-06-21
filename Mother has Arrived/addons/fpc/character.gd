@@ -1,9 +1,3 @@
-
-# COPYRIGHT Colormatic Studios
-# MIT licence
-# Quality Godot First Person Controller v2
-
-
 extends CharacterBody3D
 
 # TODO: Add descriptions for each value
@@ -100,9 +94,6 @@ func _unhandled_input(event):
 			HEAD.rotation_degrees.x -= event.relative.y * mouse_sensitivity
 
 func check_controls(): # If you add a control, you might want to add a check for it here.
-	if !InputMap.has_action(JUMP):
-		push_error("No control mapped for jumping. Please add an input map control. Disabling jump.")
-		jumping_enabled = false
 	if !InputMap.has_action(LEFT):
 		push_error("No control mapped for move left. Please add an input map control. Disabling movement.")
 		immobile = true
@@ -118,12 +109,6 @@ func check_controls(): # If you add a control, you might want to add a check for
 	if !InputMap.has_action(PAUSE):
 		push_error("No control mapped for move pause. Please add an input map control. Disabling pausing.")
 		pausing_enabled = false
-	if !InputMap.has_action(CROUCH):
-		push_error("No control mapped for crouch. Please add an input map control. Disabling crouching.")
-		crouch_enabled = false
-	if !InputMap.has_action(SPRINT):
-		push_error("No control mapped for sprint. Please add an input map control. Disabling sprinting.")
-		sprint_enabled = false
 
 
 func change_reticle(reticle): # Yup, this function is kinda strange
@@ -255,5 +240,9 @@ func check_collisions():
 	var collider = ray.get_collider()
 	if collider.is_in_group("Doors"):
 		#interact_label.visible = true
-		if Input.is_action_pressed("interact"):
-			
+		if Input.is_action_just_pressed("interact"):
+			var door_node = collider
+			while door_node and not door_node.has_method("open"):
+				door_node = door_node.get_parent()
+			if door_node and door_node.has_method("open"):
+				door_node.open()
