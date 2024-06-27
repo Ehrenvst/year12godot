@@ -14,6 +14,10 @@ config/name="Mother has Arrived"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 ui_select={
