@@ -306,7 +306,7 @@ spot_angle = 40.0471
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5273, 9.05991e-06, 18.8633)
 
 [node name="Door" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 6, 16.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5276, 6, 16.3871)
 
 [node name="Door2" parent="." instance=ExtResource("4_1v7gc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, 10.5)
