@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpg0w8g7ludd7"]
+[gd_scene load_steps=3 format=3 uid="uid://bpg0w8g7ludd7"]
 
 [ext_resource type="Texture2D" uid="uid://bds4kp8csi81h" path="res://textures/Backgrounds/TITLE SCREEN.png" id="1_dlr10"]
+[ext_resource type="Script" path="res://Menu.gd" id="1_dsdyh"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dsdyh")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -17,35 +19,29 @@ offset_bottom = 648.0
 texture = ExtResource("1_dlr10")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
+scale = Vector2(1.43597, 1.49737)
+alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 18
-
-[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Level 1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "LEVEL 1"
 
-[node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+text = "QUIT"
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "LEVEL 1"
+[connection signal="pressed" from="VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
