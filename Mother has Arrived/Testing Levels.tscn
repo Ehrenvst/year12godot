@@ -16,291 +16,95 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5394, 0, 10.4265)
 
 [node name="Lights" type="Node3D" parent="."]
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.5084, 5.8294, 17.4316)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 8.7833, 17.6378)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 4.56775, 5.8294, 17.4316)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 8.7833, 9.38618)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 8.62983, 5.8804, 15.4096)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.86616, 8.7833, 12.8602)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 8.57166, 5.8804, 11.497)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2881, 8.7833, 12.8602)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D5" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 6.70954, 5.8804, 9.4491)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2881, 8.7833, 7.13298)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 6.46715, 5.88978, 7.45928)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8135, 8.7833, 5.39677)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D7" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 4.5819, 5.88978, 2.52632)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D7" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3198, 7.09401, 1.20553)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D15" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 10.539, 5.88978, 1.16882)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D8" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3811, 7.09401, -5.9199)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D16" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 10.1317, 5.88978, -8.87591)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D9" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3811, 7.09401, -1.1489)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D17" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 14.4549, 5.88978, -5.22195)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D10" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.186, 7.09401, -1.92858)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D18" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 12.8695, 5.88978, -1.41496)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D11" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.186, 7.09401, -9.18624)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D19" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.6124, 5.86786, -1.50506)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D12" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8673, 7.09401, -11.8651)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D20" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.4198, 5.86786, -12.2202)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D13" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.92599, 7.09401, -8.11429)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D21" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 5.39405, 5.86786, -12.2202)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D14" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41586, 7.09401, 2.22237)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
-[node name="SpotLight3D22" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 5.39405, 5.86786, -5.82886)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
+[node name="OmniLight3D15" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59752, 7.09401, 13.3057)
+light_energy = 20.0
 shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
-
-[node name="SpotLight3D8" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 10.6194, 5.88978, 3.35634)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
-shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
-
-[node name="SpotLight3D9" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 11.4602, 5.89001, 7.42799)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
-shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
-
-[node name="SpotLight3D10" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 16.5041, 5.88758, 7.50509)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
-shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
-
-[node name="SpotLight3D11" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 16.5041, 5.88758, 3.41753)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
-shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
-
-[node name="SpotLight3D12" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 16.655, 5.88758, 13.496)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
-shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
-
-[node name="SpotLight3D13" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.5158, 5.88758, 13.496)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
-shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
-
-[node name="SpotLight3D14" type="SpotLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 12.4838, 5.88758, 15.4553)
-light_color = Color(0.886961, 0.981494, 1, 1)
-light_energy = 25.0
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 0.0
-light_size = 1.0
-light_specular = 2.278
-shadow_enabled = true
-shadow_blur = 0.904
-spot_range = 8.17
-spot_angle = 40.0471
+omni_range = 72.1441
 
 [node name="Character" parent="." instance=ExtResource("3_anwr0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5273, 9.05991e-06, 18.8633)
