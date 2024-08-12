@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3n7npjuevaqt"]
+
+[ext_resource type="PackedScene" uid="uid://dtpsnvhcr23qb" path="res://Models/LightningBolt.glb" id="1_k5xbm"]
+[ext_resource type="Script" path="res://Scripts/SpeedBoost.gd" id="2_lh44f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfl0e"]
+size = Vector3(0.187866, 0.501953, 0.0628052)
+
+[node name="Lightningbolt" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("2_lh44f")
+
+[node name="LightningBolt" parent="." instance=ExtResource("1_k5xbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00897855, 0, -0.00807458)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00689698, 0.249023, -0.0346985)
+shape = SubResource("BoxShape3D_kfl0e")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

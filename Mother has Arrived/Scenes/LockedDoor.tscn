@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ye2brgj5031r"]
 
-[ext_resource type="Script" path="res://LockedDoor.gd" id="1_6ckki"]
+[ext_resource type="Script" path="res://LockedDoor.gd" id="1_b6wjm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wwkcd"]
 size = Vector3(1.99261, 5.98047, 1)
@@ -44,7 +44,7 @@ _data = {
 [sub_resource type="BoxMesh" id="BoxMesh_yfu7a"]
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_6ckki")
+script = ExtResource("1_b6wjm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["Doors"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.858333, -4.02328, 0)

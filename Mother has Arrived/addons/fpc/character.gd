@@ -8,9 +8,11 @@ extends CharacterBody3D
 @export var base_speed : float = 3.0
 @export var sprint_speed : float = 6.0
 @export var crouch_speed : float = 1.0
+@export var speed_boost : float = 0.0
 
 @export var acceleration : float = 10.0
 @export var jump_velocity : float = 4.5
+
 @export var mouse_sensitivity : float = 0.1
 @export var immobile : bool = false
 @export_file var default_reticle
@@ -161,7 +163,7 @@ func handle_movement(delta, input_dir):
 	if in_air_momentum:
 		if is_on_floor():
 			if motion_smoothing:
-				velocity.x = lerp(velocity.x, direction.x * speed, acceleration * delta)
+				velocity.x = lerp(velocity.x, direction.x * (speed + speed_boost), acceleration * delta)
 				velocity.z = lerp(velocity.z, direction.z * speed, acceleration * delta)
 			else:
 				velocity.x = direction.x * speed
