@@ -126,4 +126,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, 4.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, -1.4)
 
 [node name="Lightningbolt" parent="." instance=ExtResource("5_6pyf8")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10.5882, 0.783972, -7.29801)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.4776, 9.05991e-06, 11.9887)
+
+[node name="Lightningbolt2" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.53895, 1.90735e-05, 1.45413)
+
+[node name="Lightningbolt3" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.4157, 1.90735e-05, -6.83038)
+
+[node name="Lightningbolt4" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.6061, 1.90735e-05, -12.5214)
