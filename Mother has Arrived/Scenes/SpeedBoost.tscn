@@ -6,11 +6,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_kfl0e"]
 size = Vector3(0.187866, 0.501953, 0.0628052)
 
-[node name="Lightningbolt" type="Node3D"]
+[node name="Lightningbolt" type="Node3D" groups=["speed"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("2_lh44f")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." groups=["speed"]]
 
 [node name="LightningBolt" parent="Area3D" instance=ExtResource("1_k5xbm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00897855, 0, -0.00807458)

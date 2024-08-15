@@ -5,10 +5,10 @@ extends CharacterBody3D
 @onready var ray = $Head/Camera/RayCast3D
 
 @export_category("Character")
-@export var base_speed : float = 3.0
+@export var base_speed : float = 2.0
 @export var sprint_speed : float = 6.0
 @export var crouch_speed : float = 1.0
-@export var speed_boost : float = 0.0
+@export var speed_boost : float = 0.5
 
 @export var acceleration : float = 10.0
 @export var jump_velocity : float = 4.5
@@ -35,12 +35,6 @@ extends CharacterBody3D
 @export var PAUSE : String = "ui_cancel"
 @export var CROUCH : String
 @export var SPRINT : String
-
-# Uncomment if you want full controller support
-#@export var LOOK_LEFT : String
-#@export var LOOK_RIGHT : String
-#@export var LOOK_UP : String
-#@export var LOOK_DOWN : String
 
 @export_group("Feature Settings")
 @export var jumping_enabled : bool = true
@@ -121,6 +115,11 @@ func change_reticle(reticle): # Yup, this function is kinda strange
 	RETICLE.character = self
 	$UserInterface.add_child(RETICLE)
 
+func _speedboost():
+	
+	print("hehe speeeeeed")
+	base_speed = base_speed + speed_boost
+	speed = base_speed
 
 func _physics_process(delta):
 	# Big thanks to github.com/LorenzoAncora for the concept of the improved debug values
@@ -163,7 +162,7 @@ func handle_movement(delta, input_dir):
 	if in_air_momentum:
 		if is_on_floor():
 			if motion_smoothing:
-				velocity.x = lerp(velocity.x, direction.x * (speed + speed_boost), acceleration * delta)
+				velocity.x = lerp(velocity.x, direction.x * speed, acceleration * delta)
 				velocity.z = lerp(velocity.z, direction.z * speed, acceleration * delta)
 			else:
 				velocity.x = direction.x * speed
