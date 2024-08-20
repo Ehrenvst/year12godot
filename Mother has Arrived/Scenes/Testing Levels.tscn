@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cv5a0a54q55an"]
+[gd_scene load_steps=7 format=3 uid="uid://cv5a0a54q55an"]
 
 [ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_54wsr"]
 [ext_resource type="PackedScene" uid="uid://di1pot866wfqr" path="res://Test Level.blend" id="2_kxnfa"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
 [ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://Scenes/doortest.tscn" id="4_1v7gc"]
 [ext_resource type="PackedScene" uid="uid://c3n7npjuevaqt" path="res://Scenes/SpeedBoost.tscn" id="5_6pyf8"]
+[ext_resource type="PackedScene" uid="uid://clpqp7teeda4j" path="res://Scenes/Cactus.tscn" id="6_p16je"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)
@@ -17,95 +18,329 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5394, 0, 10.4265)
 
 [node name="Lights" type="Node3D" parent="."]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 8.7833, 17.6378)
-light_energy = 20.0
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 18.0009, 7.40025, 17.31)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2333, 8.7833, 9.38618)
-light_energy = 20.0
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.3042, 7.40025, 17.31)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.86616, 8.7833, 12.8602)
-light_energy = 20.0
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.90011, 7.40025, 17.31)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2881, 8.7833, 12.8602)
-light_energy = 20.0
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.90011, 7.40025, 9.73562)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2881, 8.7833, 7.13298)
-light_energy = 20.0
+[node name="SpotLight3D5" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.4435, 7.40025, 12.1412)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8135, 8.7833, 5.39677)
-light_energy = 20.0
+[node name="SpotLight3D6" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.4435, 7.40025, 15.5546)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D7" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3198, 7.09401, 1.20553)
-light_energy = 20.0
+[node name="SpotLight3D7" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 13.5879, 7.40025, 15.5546)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D8" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3811, 7.09401, -5.9199)
-light_energy = 20.0
+[node name="SpotLight3D8" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 12.5268, 7.40025, 9.22056)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3811, 7.09401, -1.1489)
-light_energy = 20.0
+[node name="SpotLight3D9" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 10.4691, 7.40025, 9.18841)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D10" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.186, 7.09401, -1.92858)
-light_energy = 20.0
+[node name="SpotLight3D10" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.7099, 7.40025, 11.7606)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D11" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.186, 7.09401, -9.18624)
-light_energy = 20.0
+[node name="SpotLight3D11" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 18.4107, 7.40025, 15.008)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D12" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8673, 7.09401, -11.8651)
-light_energy = 20.0
+[node name="SpotLight3D12" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 18.4429, 7.19652, 9.28487)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D13" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.92599, 7.09401, -8.11429)
-light_energy = 20.0
+[node name="SpotLight3D13" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 16.771, 7.19652, 3.69035)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D14" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41586, 7.09401, 2.22237)
-light_energy = 20.0
+[node name="SpotLight3D14" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14.3274, 7.19652, 3.69035)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
-[node name="OmniLight3D15" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59752, 7.09401, 13.3057)
-light_energy = 20.0
+[node name="SpotLight3D15" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14.7454, 7.19652, 7.51648)
+light_energy = 4.5
 shadow_enabled = true
-omni_range = 72.1441
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 10.5656, 7.19652, 3.52959)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.67512, 7.19652, 4.55846)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.41134, 7.19652, 6.71268)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.03534, 7.19652, 7.22711)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.77812, 7.19652, 2.66147)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.4822, 7.19652, -2.45076)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.73942, 7.19652, 0.539414)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D23" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 10.7263, 7.19652, 1.21461)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D24" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 16.4494, 7.19652, 0.571566)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D25" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.2277, 7.19652, -2.3543)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D26" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 18.5072, 7.19652, 1.18246)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D27" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 18.5715, 7.19652, -7.04855)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D28" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 18.3786, 7.19652, -12.2894)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D29" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 13.0734, 7.19652, -12.3537)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D30" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.57539, 7.19652, -12.3537)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D31" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.54978, 7.19652, -10.8747)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D32" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.42118, 7.19652, -6.4055)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D33" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 10.1154, 7.19652, -9.55644)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D34" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 15.935, 7.19652, -9.52429)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D35" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 16.0315, 7.19652, -5.18371)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
+
+[node name="SpotLight3D36" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 9.98682, 7.19652, -5.34447)
+light_energy = 4.5
+shadow_enabled = true
+shadow_bias = 0.19
+spot_range = 4096.31
+spot_attenuation = 0.01
+spot_angle = 47.55
 
 [node name="Character" parent="." instance=ExtResource("3_anwr0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5273, 9.05991e-06, 18.8633)
@@ -136,3 +371,24 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.4157, 1.90735e-05, -6.8303
 
 [node name="Lightningbolt4" parent="." instance=ExtResource("5_6pyf8")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.6061, 1.90735e-05, -12.5214)
+
+[node name="Cactus" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5434, 1.00136e-05, 5.54086)
+
+[node name="Cactus2" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56734, 2.00272e-05, 13.392)
+
+[node name="Cactus3" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(0.00499159, 0, 0.999988, 0, 1, 0, -0.999988, 0, 0.00499159, 8.51239, 1.00136e-05, 9.45055)
+
+[node name="Cactus4" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(-0.999976, 0, 0.00698123, 0, 1, 0, -0.00698123, 0, -0.999976, 16.5349, 1.00136e-05, 5.43931)
+
+[node name="Cactus5" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(-0.00174539, 0, -0.999998, 0, 1, 0, 0.999998, 0, -0.00174539, 8.51239, 1.00136e-05, -0.399835)
+
+[node name="Cactus6" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 4.3079, 1.00136e-05, -12.6757)
+
+[node name="Cactus7" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4319, 1.00136e-05, 11.5129)

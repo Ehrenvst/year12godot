@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://iognddf3hf2w"]
+
+[ext_resource type="Texture2D" uid="uid://bh701uvj32wgq" path="res://textures/Backgrounds/BACKGROUND.png" id="1_1a7t4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(613, 319)
+scale = Vector2(1.94794, 2.11667)
+texture = ExtResource("1_1a7t4")
+
+[node name="RUHROH" type="TextEdit" parent="."]
+offset_left = 45.0
+offset_top = 28.0
+offset_right = 208.0
+offset_bottom = 130.0
+scale = Vector2(2.15725, 2.43811)
+text = "Ruh Roh! You Died!
+
+Leave now >:(((((("

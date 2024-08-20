@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://clpqp7teeda4j"]
+
+[ext_resource type="Script" path="res://Scenes/Death.gd" id="1_3jg38"]
+[ext_resource type="PackedScene" uid="uid://ix5o6ps3eqgc" path="res://Models/Cactus.glb" id="1_aoe5c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ea673"]
+size = Vector3(1, 2, 1)
+
+[node name="Cactus" type="Node3D"]
+script = ExtResource("1_3jg38")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="Cactus" parent="Area3D" instance=ExtResource("1_aoe5c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00212836, 0, -0.00364614)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0)
+shape = SubResource("BoxShape3D_ea673")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

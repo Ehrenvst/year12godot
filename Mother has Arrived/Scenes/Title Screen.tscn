@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://coe4j0xjykcbc"]
+[gd_scene load_steps=4 format=3 uid="uid://coe4j0xjykcbc"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_71bry"]
 [ext_resource type="Texture2D" uid="uid://bh701uvj32wgq" path="res://textures/Backgrounds/BACKGROUND.png" id="2_hadof"]
 [ext_resource type="Texture2D" uid="uid://ctep35t5d46av" path="res://textures/Backgrounds/LOGOTITLE.png" id="3_srghb"]
-[ext_resource type="PackedScene" uid="uid://bxmo68pxvxqdq" path="res://Scenes/fullscreenbutton.tscn" id="4_t4y5k"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -44,14 +43,6 @@ text = "Level 1"
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Fullscreen"
-
-[node name="Node2D" parent="." instance=ExtResource("4_t4y5k")]
-position = Vector2(746, 538)
-scale = Vector2(1.5, 1.5)
 
 [connection signal="pressed" from="VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
