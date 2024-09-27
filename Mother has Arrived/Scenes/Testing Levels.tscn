@@ -1,80 +1,252 @@
 [gd_scene load_steps=7 format=3 uid="uid://cv5a0a54q55an"]
 
-[ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_54wsr"]
-[ext_resource type="PackedScene" uid="uid://di1pot866wfqr" path="res://Test Level.blend" id="2_kxnfa"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
 [ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://Scenes/doortest.tscn" id="4_1v7gc"]
+[ext_resource type="PackedScene" uid="uid://co7y5hywqmr18" path="res://Models/MAZE.glb" id="5_4qabs"]
 [ext_resource type="PackedScene" uid="uid://c3n7npjuevaqt" path="res://Scenes/SpeedBoost.tscn" id="5_6pyf8"]
 [ext_resource type="PackedScene" uid="uid://clpqp7teeda4j" path="res://Scenes/Cactus.tscn" id="6_p16je"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lc0tn"]
+size = Vector3(3.11182, 17.0366, 5.25708)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)
 
-[node name="Test Level 2" parent="." instance=ExtResource("1_54wsr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5404, 0, -5.53087)
-
-[node name="Test Level" parent="." instance=ExtResource("2_kxnfa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5394, 0, 10.4265)
-
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.352, 14.2465, -5.81379)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.352, 11.9897, -11.0515)
 light_energy = 16.0
 omni_range = 34.6122
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.352, 14.2465, 9.6599)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.352, 14.2465, 7.56667)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.8122, 14.2465, 0.0610809)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.701, 14.2465, 2.3263)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.9991, 14.2465, -19.7641)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.701, 14.2465, 28.2773)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0714, 14.2465, 28.2773)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.66174, 14.2465, 38.2451)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.94845, 14.2465, 1.59129)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0882, 14.2465, 59.7246)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.37494, 11.1953, 109.792)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.351, 11.1953, 109.792)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.9101, 11.1953, 77.0697)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.9101, 11.1953, 43.5523)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4909, 11.1953, 51.9387)
+light_energy = 16.0
+omni_range = 34.6122
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4909, 11.1953, 83.4528)
 light_energy = 16.0
 omni_range = 34.6122
 
 [node name="Character" parent="." instance=ExtResource("3_anwr0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5273, 9.05991e-06, 18.8633)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4834, 5.24521e-06, 20.917)
 
 [node name="Door" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5276, 6, 16.3871)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7924, 6, 15.0568)
 
 [node name="Door2" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, 10.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7924, 6, -5.81338)
 
 [node name="Door3" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 6, 10.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7801, 6, -20.0065)
 
 [node name="Door4" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, 4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7657, 6, 31.9494)
+
+[node name="Door15" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.7751, 6, 72.1193)
+
+[node name="Door16" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.763603, 6, 78.2661)
+
+[node name="Door17" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2151, 6, 86.2107)
+
+[node name="Door18" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.222, 6, 84.2043)
+
+[node name="Door19" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.2272, 6, 76.1937)
 
 [node name="Door5" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 6, -1.4)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.9801, 6, 32.0761)
+
+[node name="Door6" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 68.7262, 6, 14.1092)
+
+[node name="Door7" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 60.7271, 6, -1.90028)
+
+[node name="Door8" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 52.8224, 6, 2.11197)
+
+[node name="Door9" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 70.6732, 6, 2.10384)
+
+[node name="Door10" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 66.8784, 6, -17.9015)
+
+[node name="Door11" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.7768, 6, -11.9336)
+
+[node name="Door12" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.14424, 6, 44.0566)
+
+[node name="Door13" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.777, 6, 34.1218)
+
+[node name="Door14" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 40.3328, 6, 52.102)
 
 [node name="Lightningbolt" parent="." instance=ExtResource("5_6pyf8")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.4776, 9.05991e-06, 11.9887)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 11.7189, 9.05991e-06, 11.9044)
 
 [node name="Lightningbolt2" parent="." instance=ExtResource("5_6pyf8")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.53895, 1.90735e-05, 1.45413)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 21.4401, 9.05991e-06, 7.12348)
 
 [node name="Lightningbolt3" parent="." instance=ExtResource("5_6pyf8")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.4157, 1.90735e-05, -6.83038)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 51.6131, 9.05991e-06, 1.12076)
 
 [node name="Lightningbolt4" parent="." instance=ExtResource("5_6pyf8")]
-transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.6061, 1.90735e-05, -12.5214)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 69.9931, 9.05991e-06, 10.0983)
+
+[node name="Lightningbolt5" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 67.2308, 9.05991e-06, 29.1157)
+
+[node name="Lightningbolt6" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 44.4948, 9.05991e-06, 35.2778)
+
+[node name="Lightningbolt7" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 18.9434, 9.05991e-06, 26.9378)
+
+[node name="Lightningbolt8" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.83835, 9.05991e-06, 33.0467)
+
+[node name="Lightningbolt9" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -27.5211, 9.05991e-06, 64.9292)
+
+[node name="Lightningbolt10" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -49.4259, 9.05991e-06, 33.2761)
+
+[node name="Lightningbolt11" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -45.8707, 9.05991e-06, 81.2145)
+
+[node name="Lightningbolt12" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -45.8707, 9.05991e-06, 98.3026)
+
+[node name="Lightningbolt13" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.0064, 9.05991e-06, 110.803)
+
+[node name="Lightningbolt14" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.28611, 9.05991e-06, 75.0215)
+
+[node name="Lightningbolt15" parent="." instance=ExtResource("5_6pyf8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.72367, 9.05991e-06, 93.9445)
 
 [node name="Cactus" parent="." instance=ExtResource("6_p16je")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5434, 1.00136e-05, 5.54086)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.7619, 1.00136e-05, -20.9813)
+
+[node name="Cactus15" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(0.536151, 0, 0.844122, 0, 1, 0, -0.844122, 0, 0.536151, 8.224, -0.0659955, 15.6935)
 
 [node name="Cactus2" parent="." instance=ExtResource("6_p16je")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56734, 2.00272e-05, 13.392)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.2209, 1.00136e-05, -12.8819)
 
 [node name="Cactus3" parent="." instance=ExtResource("6_p16je")]
-transform = Transform3D(0.00499159, 0, 0.999988, 0, 1, 0, -0.999988, 0, 0.00499159, 8.51239, 1.00136e-05, 9.45055)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6834, 1.00136e-05, 7.52363)
 
 [node name="Cactus4" parent="." instance=ExtResource("6_p16je")]
-transform = Transform3D(-0.999976, 0, 0.00698123, 0, 1, 0, -0.00698123, 0, -0.999976, 16.5349, 1.00136e-05, 5.43931)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.8488, 1.00136e-05, -2.78023)
 
 [node name="Cactus5" parent="." instance=ExtResource("6_p16je")]
-transform = Transform3D(-0.00174539, 0, -0.999998, 0, 1, 0, 0.999998, 0, -0.00174539, 8.51239, 1.00136e-05, -0.399835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.7856, 1.00136e-05, 1.07368)
 
 [node name="Cactus6" parent="." instance=ExtResource("6_p16je")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 4.3079, 1.00136e-05, -12.6757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.7323, 1.00136e-05, 13.1029)
 
 [node name="Cactus7" parent="." instance=ExtResource("6_p16je")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4319, 1.00136e-05, 11.5129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3893, 1.00136e-05, 31.068)
+
+[node name="Cactus8" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89774, 1.00136e-05, 43.0327)
+
+[node name="Cactus9" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.7941, 1.00136e-05, 74.4018)
+
+[node name="Cactus10" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.3031, 1.00136e-05, 33.0597)
+
+[node name="Cactus11" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.2436, 1.00136e-05, 53.1883)
+
+[node name="Cactus12" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2251, 1.00136e-05, 85.2008)
+
+[node name="Cactus13" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.2007, 1.00136e-05, 91.7858)
+
+[node name="Cactus14" parent="." instance=ExtResource("6_p16je")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7498, 1.00136e-05, 74.1153)
+
+[node name="MAZE" parent="." instance=ExtResource("5_4qabs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7701, -0.0828984, 14.1014)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(13.7699, 0, 0, 0, 1.15391, 0, 0, 0, 6.44208, -24.3429, -109.248, 112.105)
+shape = SubResource("BoxShape3D_lc0tn")
