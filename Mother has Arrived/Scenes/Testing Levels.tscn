@@ -1,13 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cv5a0a54q55an"]
+[gd_scene load_steps=6 format=3 uid="uid://cv5a0a54q55an"]
 
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
 [ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://Scenes/doortest.tscn" id="4_1v7gc"]
 [ext_resource type="PackedScene" uid="uid://co7y5hywqmr18" path="res://Models/MAZE.glb" id="5_4qabs"]
 [ext_resource type="PackedScene" uid="uid://c3n7npjuevaqt" path="res://Scenes/SpeedBoost.tscn" id="5_6pyf8"]
 [ext_resource type="PackedScene" uid="uid://clpqp7teeda4j" path="res://Scenes/Cactus.tscn" id="6_p16je"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_lc0tn"]
-size = Vector3(3.11182, 17.0366, 5.25708)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)
@@ -95,7 +92,7 @@ light_energy = 16.0
 omni_range = 34.6122
 
 [node name="Character" parent="." instance=ExtResource("3_anwr0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4834, 5.24521e-06, 20.917)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0159, 5.24521e-06, 111.259)
 
 [node name="Door" parent="." instance=ExtResource("4_1v7gc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7924, 6, 15.0568)
@@ -246,7 +243,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7498, 1.00136e-05, 74.115
 
 [node name="MAZE" parent="." instance=ExtResource("5_4qabs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7701, -0.0828984, 14.1014)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(13.7699, 0, 0, 0, 1.15391, 0, 0, 0, 6.44208, -24.3429, -109.248, 112.105)
-shape = SubResource("BoxShape3D_lc0tn")

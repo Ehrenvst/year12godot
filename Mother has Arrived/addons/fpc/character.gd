@@ -1,7 +1,5 @@
 extends CharacterBody3D
 
-# TODO: Add descriptions for each value
-
 @onready var ray = $Head/Camera/RayCast3D
 
 @export_category("Character")
@@ -175,8 +173,6 @@ func handle_movement(delta, input_dir):
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
 
-
-
 func update_camera_fov():
 	if state == "sprinting":
 		CAMERA.fov = lerp(CAMERA.fov, 85.0, 0.3)
@@ -226,6 +222,9 @@ func _process(delta):
 					Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				Input.MOUSE_MODE_VISIBLE:
 					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	if $Head/Camera.position.y < -1:
+		print("omg you win")
 	
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
