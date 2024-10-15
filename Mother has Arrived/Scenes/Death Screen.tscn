@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://csitrnhlxv8fo"]
+[gd_scene load_steps=4 format=3 uid="uid://be12f865w226"]
 
-[ext_resource type="Script" path="res://Scripts/Endscreen.gd" id="1_603td"]
-[ext_resource type="Texture2D" uid="uid://bh701uvj32wgq" path="res://textures/Backgrounds/BACKGROUND.png" id="2_2gcuv"]
-[ext_resource type="Texture2D" uid="uid://ctep35t5d46av" path="res://textures/Backgrounds/LOGOTITLE.png" id="3_w72kn"]
+[ext_resource type="Script" path="res://Scripts/Endscreen.gd" id="1_w0ax6"]
+[ext_resource type="Texture2D" uid="uid://bh701uvj32wgq" path="res://textures/Backgrounds/BACKGROUND.png" id="2_4tfef"]
+[ext_resource type="Texture2D" uid="uid://ctep35t5d46av" path="res://textures/Backgrounds/LOGOTITLE.png" id="3_hedxx"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,12 +11,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_603td")
+script = ExtResource("1_w0ax6")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1044, 655)
 scale = Vector2(1.11776, 1.25745)
-texture = ExtResource("2_2gcuv")
+texture = ExtResource("2_4tfef")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -38,7 +38,7 @@ alignment = 1
 [node name="Logotitle" type="Sprite2D" parent="VBoxContainer"]
 position = Vector2(88.2332, -1.74419)
 scale = Vector2(0.286472, 0.290697)
-texture = ExtResource("3_w72kn")
+texture = ExtResource("3_hedxx")
 
 [node name="Title" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -47,15 +47,6 @@ text = "Play Again :D"
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 100.0
-offset_right = 1214.0
-offset_bottom = 127.0
-theme_override_font_sizes/font_size = 17
-text = "OMG YOU WON!!! You must feel so... so..... so........ so accomplished right now :) - Have a good day... or not. I don't care!! I am a game."
 
 [connection signal="pressed" from="VBoxContainer/Title" to="." method="_on_title_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

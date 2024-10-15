@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @onready var ray = $Head/Camera/RayCast3D
+@onready var character = $"."
 
 @export_category("Character")
 @export var base_speed : float = 2.0
@@ -223,7 +224,7 @@ func _process(delta):
 				Input.MOUSE_MODE_VISIBLE:
 					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	if $Head/Camera.position.y < -1:
+	if character.position.y < -1:
 		print("omg you win")
 	
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))

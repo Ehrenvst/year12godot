@@ -92,7 +92,7 @@ light_energy = 16.0
 omni_range = 34.6122
 
 [node name="Character" parent="." instance=ExtResource("3_anwr0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0159, 5.24521e-06, 111.259)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9163, 5.24521e-06, 110.592)
 
 [node name="Door" parent="." instance=ExtResource("4_1v7gc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7924, 6, 15.0568)

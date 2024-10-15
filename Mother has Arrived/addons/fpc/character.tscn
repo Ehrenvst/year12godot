@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cc1m2a1obsyn4"]
+[gd_scene load_steps=22 format=3 uid="uid://cc1m2a1obsyn4"]
 
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_0t4e8"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_v3ckk"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="3_x1wcc"]
+[ext_resource type="PackedScene" uid="uid://bdx11lyk26du3" path="res://Scenes/timer.tscn" id="4_g0kb6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
 albedo_color = Color(0.909804, 0.596078, 0, 1)
@@ -460,3 +461,5 @@ target_position = Vector3(0, 0.5, 0)
 
 [node name="EditorModule" type="Node" parent="."]
 script = ExtResource("3_v3ckk")
+
+[node name="Control" parent="." instance=ExtResource("4_g0kb6")]
