@@ -3,6 +3,12 @@ extends CharacterBody3D
 @onready var ray = $Head/Camera/RayCast3D
 @onready var character = $"."
 
+@onready var interaction_notifier = $Control2/interaction_notifier
+@onready var locked = $Control2/locked
+@onready var unlock = $Control2/unlock
+
+var has_key = false
+
 @export_category("Character")
 @export var base_speed : float = 2.0
 @export var sprint_speed : float = 6.0
@@ -231,6 +237,9 @@ func _process(delta):
 
 	if ray.is_colliding():
 		check_collisions()
+		
+		
+		
 	else:
 		pass
 		#interact_label.visible = false
@@ -239,11 +248,31 @@ func _process(delta):
 	
 func check_collisions():
 	var collider = ray.get_collider()
-	if collider.is_in_group("Doors"):
-		#interact_label.visible = true
-		if Input.is_action_just_pressed("interact"):
-			var door_node = collider
-			while door_node and not door_node.has_method("open"):
-				door_node = door_node.get_parent()
-			if door_node and door_node.has_method("open"):
-				door_node.open()
+	if collider:
+		
+		if collider.is_in_group("Doors") and !collider.door_locked:
+			interaction_notifier.visible = true
+			if Input.is_action_just_pressed("interact"):
+				var door_node = collider
+				while door_node and not door_node.has_method("open"):
+					door_node = door_node.get_parent()
+				if door_node and door_node.has_method("open"):
+					door_node.open()
+					
+		elif collider.is_in_group("Doors") and collider.door_locked and !has_key:
+			locked.visible = true
+			
+		elif collider.is_in_group("Doors") and collider.door_locked and has_key:
+			unlock.visible = true
+			if Input.is_action_just_pressed("interact"):
+				collider.door_locked = false
+				unlock.visible = false
+		
+		else:
+			interaction_notifier.visible = false
+			locked.visible = false
+			unlock.visible = false
+	else:
+		interaction_notifier.visible = false
+		locked.visible = false
+		unlock.visible = false

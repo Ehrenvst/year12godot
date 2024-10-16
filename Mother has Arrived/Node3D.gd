@@ -1,4 +1,6 @@
-extends Node3D
+extends StaticBody3D
+
+@export var door_locked = false
 
 @onready var animation_player = $AnimationPlayer
 
