@@ -479,6 +479,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="interaction_notifier" type="Label" parent="Control2"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -494,6 +495,7 @@ grow_vertical = 2
 text = "Press 'E' to interect with door."
 
 [node name="locked" type="Label" parent="Control2"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -510,6 +512,7 @@ text = "This door is locked!
 Find a key to unlock it."
 
 [node name="unlock" type="Label" parent="Control2"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
