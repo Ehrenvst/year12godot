@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://coe4j0xjykcbc"]
+[gd_scene load_steps=4 format=3 uid="uid://coe4j0xjykcbc"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_71bry"]
 [ext_resource type="Texture2D" uid="uid://bh701uvj32wgq" path="res://textures/Backgrounds/BACKGROUND.png" id="2_hadof"]
 [ext_resource type="Texture2D" uid="uid://ctep35t5d46av" path="res://textures/Backgrounds/LOGOTITLE.png" id="3_srghb"]
-[ext_resource type="PackedScene" uid="uid://bdx11lyk26du3" path="res://Scenes/timer.tscn" id="4_y3u88"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,10 +21,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 420.0
-offset_top = 461.0
-offset_right = 603.0
-offset_bottom = 527.0
+offset_left = 358.0
+offset_top = 389.0
+offset_right = 541.0
+offset_bottom = 455.0
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(1.74537, 1.72)
@@ -44,17 +43,6 @@ text = "Level 1"
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
-
-[node name="Control" parent="." instance=ExtResource("4_y3u88")]
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 153.0
-offset_right = 417.0
-offset_bottom = 230.0
-theme_override_font_sizes/font_size = 56
-text = "Speedrun Time"
 
 [connection signal="pressed" from="VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

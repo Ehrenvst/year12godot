@@ -224,8 +224,8 @@ func _process(delta):
 				Input.MOUSE_MODE_VISIBLE:
 					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	if character.position.y < -1:
-		print("omg you win")
+	if character.position.y < -20:
+		get_tree().change_scene_to_file("res://Scenes/End Screen.tscn")
 	
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
