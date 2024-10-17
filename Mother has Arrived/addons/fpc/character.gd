@@ -3,9 +3,9 @@ extends CharacterBody3D
 @onready var ray = $Head/Camera/RayCast3D
 @onready var player = $"."
 
-@onready var interaction_notifier = $Control2/interaction_notifier
-@onready var locked = $Control2/locked
-@onready var unlock = $Control2/unlock
+@onready var interaction_notifier = $Control/interaction_notifier
+@onready var locked = $Control/locked
+@onready var unlock = $Control/unlock
 
 var has_key = false
 
@@ -125,6 +125,11 @@ func _speedboost():
 	print("hehe speeeeeed")
 	base_speed = base_speed + speed_boost
 	speed = base_speed
+	
+func _key():
+	
+	print("omg a key")
+	has_key = true
 
 func _physics_process(delta):
 	# Big thanks to github.com/LorenzoAncora for the concept of the improved debug values

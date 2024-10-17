@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://addons/fpc/character.gd" id="1_0t4e8"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_v3ckk"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="3_x1wcc"]
-[ext_resource type="PackedScene" uid="uid://bdx11lyk26du3" path="res://Scenes/timer.tscn" id="4_g0kb6"]
+[ext_resource type="PackedScene" uid="uid://by0ctqbgjpl3t" path="res://Scenes/timer.tscn" id="4_g0kb6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
 albedo_color = Color(0.909804, 0.596078, 0, 1)
@@ -462,9 +462,9 @@ target_position = Vector3(0, 0.5, 0)
 [node name="EditorModule" type="Node" parent="."]
 script = ExtResource("3_v3ckk")
 
-[node name="Control" parent="." instance=ExtResource("4_g0kb6")]
+[node name="Timer" parent="." instance=ExtResource("4_g0kb6")]
 
-[node name="Control2" type="Control" parent="."]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -477,8 +477,9 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="interaction_notifier" type="Label" parent="Control2"]
+[node name="interaction_notifier" type="Label" parent="Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -494,7 +495,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Press 'E' to interect with door."
 
-[node name="locked" type="Label" parent="Control2"]
+[node name="locked" type="Label" parent="Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -511,7 +512,7 @@ grow_vertical = 2
 text = "This door is locked!
 Find a key to unlock it."
 
-[node name="unlock" type="Label" parent="Control2"]
+[node name="unlock" type="Label" parent="Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
