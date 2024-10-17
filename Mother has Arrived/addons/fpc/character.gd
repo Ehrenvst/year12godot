@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var ray = $Head/Camera/RayCast3D
-@onready var character = $"."
+@onready var player = $"."
 
 @onready var interaction_notifier = $Control2/interaction_notifier
 @onready var locked = $Control2/locked
@@ -214,7 +214,6 @@ func headbob_animation(moving):
 			HEADBOB_ANIMATION.play("RESET", 0.25)
 			HEADBOB_ANIMATION.speed_scale = 1
 
-
 func _process(delta):
 	$UserInterface/DebugPanel.add_property("FPS", Performance.get_monitor(Performance.TIME_FPS), 0)
 	var status : String = state
@@ -230,26 +229,21 @@ func _process(delta):
 				Input.MOUSE_MODE_VISIBLE:
 					Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	if character.position.y < -20:
+	if player.position.y < -20:
 		get_tree().change_scene_to_file("res://Scenes/End Screen.tscn")
 	
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 	if ray.is_colliding():
 		check_collisions()
-		
-		
-		
 	else:
 		pass
-		#interact_label.visible = false
 
 	was_on_floor = is_on_floor() # This must always be at the end of physics_process
 	
 func check_collisions():
 	var collider = ray.get_collider()
 	if collider:
-		
 		if collider.is_in_group("Doors") and !collider.door_locked:
 			interaction_notifier.visible = true
 			if Input.is_action_just_pressed("interact"):
