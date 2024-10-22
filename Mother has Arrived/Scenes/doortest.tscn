@@ -8,13 +8,25 @@ size = Vector3(1.99261, 5.98047, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_6vlsm"]
 
 [sub_resource type="Animation" id="Animation_610x6"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_qdprp"]
 resource_name = "open"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
+tracks/0/path = NodePath("..:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,21 +43,20 @@ _data = {
 }
 
 [node name="StaticBody3D" type="StaticBody3D" groups=["Doors"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.858333, -4.02328, 0)
 script = ExtResource("1_a14rw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0.129653, 1.02456, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 1, -3, 0)
 shape = SubResource("BoxShape3D_q5fd6")
 
 [node name="Door" type="Area3D" parent="." groups=["Doors"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Door"]
-transform = Transform3D(2, 0, 0, 0, 6, 0, 0, 0, 0.1, 0.147171, 1, 0)
+transform = Transform3D(2, 0, 0, 0, 6, 0, 0, 0, 0.1, 1.03214, -2.96427, 0)
 mesh = SubResource("BoxMesh_6vlsm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0.129653, 1.02456, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 1.01462, -2.93971, 0)
 shape = SubResource("BoxShape3D_q5fd6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -53,3 +64,5 @@ root_node = NodePath("../Door")
 libraries = {
 "": SubResource("AnimationLibrary_4bm44")
 }
+
+[node name="Node3D" type="Node3D" parent="."]

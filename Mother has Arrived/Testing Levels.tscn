@@ -1,0 +1,337 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv5a0a54q55an"]
+
+[ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_54wsr"]
+[ext_resource type="PackedScene" uid="uid://di1pot866wfqr" path="res://Test Level.blend" id="2_kxnfa"]
+[ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
+[ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://doortest.tscn" id="4_1v7gc"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)
+
+[node name="Test Level 2" parent="." instance=ExtResource("1_54wsr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5404, 0, -5.53087)
+
+[node name="Test Level" parent="." instance=ExtResource("2_kxnfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5394, 0, 10.4265)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.5084, 5.8294, 17.4316)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 4.56775, 5.8294, 17.4316)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 8.62983, 5.8804, 15.4096)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 8.57166, 5.8804, 11.497)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 6.70954, 5.8804, 9.4491)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 6.46715, 5.88978, 7.45928)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 4.5819, 5.88978, 2.52632)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 10.539, 5.88978, 1.16882)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 10.1317, 5.88978, -8.87591)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 14.4549, 5.88978, -5.22195)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 12.8695, 5.88978, -1.41496)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.6124, 5.86786, -1.50506)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.4198, 5.86786, -12.2202)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 5.39405, 5.86786, -12.2202)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 5.39405, 5.86786, -5.82886)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 10.6194, 5.88978, 3.35634)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 11.4602, 5.89001, 7.42799)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 16.5041, 5.88758, 7.50509)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 16.5041, 5.88758, 3.41753)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 16.655, 5.88758, 13.496)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 18.5158, 5.88758, 13.496)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, -0.0016232, 0.999999, 0, -0.999999, -0.0016232, 12.4838, 5.88758, 15.4553)
+light_color = Color(0.886961, 0.981494, 1, 1)
+light_energy = 25.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+light_specular = 2.278
+shadow_enabled = true
+shadow_blur = 0.904
+spot_range = 8.17
+spot_angle = 40.0471
+
+[node name="Character" parent="." instance=ExtResource("3_anwr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5273, 9.05991e-06, 18.8633)
+base_speed = null
+sprint_speed = null
+crouch_speed = null
+acceleration = null
+jump_velocity = null
+mouse_sensitivity = null
+immobile = null
+JUMP = null
+LEFT = null
+RIGHT = null
+FORWARD = null
+BACKWARD = null
+PAUSE = null
+CROUCH = null
+SPRINT = null
+jumping_enabled = null
+in_air_momentum = null
+motion_smoothing = null
+sprint_enabled = null
+crouch_enabled = null
+crouch_mode = null
+sprint_mode = null
+dynamic_fov = null
+continuous_jumping = null
+view_bobbing = null
+jump_animation = null
+pausing_enabled = null
+gravity_enabled = null
+
+[node name="Door" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4765, 2.38419e-07, 16.417)

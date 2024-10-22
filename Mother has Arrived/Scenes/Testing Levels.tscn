@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cv5a0a54q55an"]
+[gd_scene load_steps=10 format=3 uid="uid://cv5a0a54q55an"]
 
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
 [ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://Scenes/doortest.tscn" id="4_1v7gc"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://c3n7npjuevaqt" path="res://Scenes/SpeedBoost.tscn" id="5_6pyf8"]
 [ext_resource type="PackedScene" uid="uid://clpqp7teeda4j" path="res://Scenes/Cactus.tscn" id="6_p16je"]
 [ext_resource type="PackedScene" uid="uid://chayxl3ygqa8n" path="res://Scenes/Key.tscn" id="6_v6wh2"]
+[ext_resource type="AudioStream" uid="uid://ctrrmqrkchchi" path="res://Low Rumble White Noise.mp3" id="7_5l1he"]
+[ext_resource type="PackedScene" uid="uid://b3op17s0qpbbq" path="res://Models/sign.glb" id="8_fpxb8"]
+[ext_resource type="PackedScene" uid="uid://46d48gptuli6" path="res://Models/JUMPsign.glb" id="9_50olc"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)
@@ -93,35 +96,35 @@ light_energy = 16.0
 omni_range = 34.6122
 
 [node name="Character" parent="." instance=ExtResource("3_anwr0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84394, 5.24521e-06, 96.1588)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6109, 5.24521e-06, 20.4832)
 
 [node name="Door" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6969, 2.00711, 15.0568)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8362, 5.87003, 15.0568)
 
 [node name="Door2" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6969, 2.00711, -5.81338)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8362, 5.87003, -5.81338)
 
 [node name="Door3" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6846, 2.00711, -20.0065)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.8239, 5.87003, -20.0065)
 
 [node name="Door4" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6702, 2.00711, 31.9494)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8095, 5.87003, 31.9494)
 
 [node name="Door15" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.6796, 2.00711, 72.1193)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8189, 5.87003, 72.1193)
 
 [node name="Door16" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66815, 2.00711, 78.2661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.807452, 5.87003, 78.2661)
 door_locked = true
 
 [node name="Door17" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3106, 2.00711, 86.2107)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1713, 5.87003, 86.2107)
 
 [node name="Door18" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3175, 2.00711, 84.2043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1782, 5.87003, 84.2043)
 
 [node name="Door19" parent="." instance=ExtResource("4_1v7gc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.3227, 2.00711, 76.1937)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.1834, 5.87003, 76.1937)
 
 [node name="Door5" parent="." instance=ExtResource("4_1v7gc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.9801, 6, 32.0761)
@@ -149,6 +152,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.1442
 
 [node name="Door13" parent="." instance=ExtResource("4_1v7gc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.777, 6, 34.1218)
+door_locked = true
+
+[node name="Door20" parent="." instance=ExtResource("4_1v7gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.2242, 6, 112.145)
+door_locked = true
 
 [node name="Door14" parent="." instance=ExtResource("4_1v7gc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 40.3328, 6, 52.102)
@@ -247,4 +255,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7498, 1.00136e-05, 74.115
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7701, -0.0828984, 14.1014)
 
 [node name="Key" parent="." instance=ExtResource("6_v6wh2")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.198328, 0.638893, 111.05)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -36.2897, 0.638893, 94.3378)
+
+[node name="Key2" parent="." instance=ExtResource("6_v6wh2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -24.4464, 0.638893, 80.6945)
+
+[node name="Key3" parent="." instance=ExtResource("6_v6wh2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 25.8541, 0.638893, 37.0756)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48.4753)
+stream = ExtResource("7_5l1he")
+volume_db = 35.221
+unit_size = 100.0
+autoplay = true
+attenuation_filter_db = 0.0
+
+[node name="sign" parent="." instance=ExtResource("8_fpxb8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7213, 2.50693, 15.1424)
+
+[node name="JUMPsign" parent="." instance=ExtResource("9_50olc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7935, 2.80005, 108.228)

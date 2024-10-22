@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctrrmqrkchchi"
+path="res://.godot/imported/Low Rumble White Noise.mp3-accb9a3d8a22738f604104da7ca690ee.mp3str"
+
+[deps]
+
+source_file="res://Low Rumble White Noise.mp3"
+dest_files=["res://.godot/imported/Low Rumble White Noise.mp3-accb9a3d8a22738f604104da7ca690ee.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
