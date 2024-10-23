@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://7ccyvgnra0gu"]
 
-[ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_su8b8"]
+[ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Models/Test Level 2.blend" id="1_su8b8"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="2_tukm0"]
 [ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://Scenes/doortest.tscn" id="3_817o4"]
 

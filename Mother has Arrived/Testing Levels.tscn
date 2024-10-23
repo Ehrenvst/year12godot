@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cv5a0a54q55an"]
 
-[ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Test Level 2.blend" id="1_54wsr"]
-[ext_resource type="PackedScene" uid="uid://di1pot866wfqr" path="res://Test Level.blend" id="2_kxnfa"]
+[ext_resource type="PackedScene" uid="uid://duepcc4pk4i0n" path="res://Models/Test Level 2.blend" id="1_54wsr"]
+[ext_resource type="PackedScene" uid="uid://di1pot866wfqr" path="res://Models/Test Level.blend" id="2_kxnfa"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://addons/fpc/character.tscn" id="3_anwr0"]
-[ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://doortest.tscn" id="4_1v7gc"]
+[ext_resource type="PackedScene" uid="uid://d3e8di2vjfwg3" path="res://Scenes/doortest.tscn" id="4_1v7gc"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13441, 0, 0)

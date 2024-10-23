@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxmo68pxvxqdq"]
 
-[ext_resource type="Script" path="res://FullScreen Button.gd" id="1_d4g0u"]
+[ext_resource type="Script" path="res://Scripts/FullScreen Button.gd" id="1_d4g0u"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_d4g0u")
