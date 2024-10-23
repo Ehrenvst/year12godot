@@ -266,6 +266,7 @@ func check_collisions():
 			if Input.is_action_just_pressed("interact"):
 				collider.door_locked = false
 				unlock.visible = false
+				has_key = false
 		
 		else:
 			interaction_notifier.visible = false

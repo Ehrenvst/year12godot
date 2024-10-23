@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var label = $Label
 @onready var timer = $Timer
 @onready var total_time_seconds : int = 0
-@onready var finished_time = 0
+@export var finished_time : int = 0
 
 func _ready():
 	var total_time_seconds = 0
